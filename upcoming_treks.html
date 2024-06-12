@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upcoming Treks</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="cards1.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="state-cards">
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
+            <!-- <a href="upcomingtreks.php?state=Karnataka">
+                <div class="state-card state-card1">
+                    <img src="img/karnataka.jpg" alt="las vegas">
+                    <div class="state-card-details">
+                        <h3>Karnataka</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="upcomingtreks.php?state=Kerala">
+                <div class="state-card state-card2">
+                    <img src="img/karnataka.jpg" alt="New York">
+                    <div class="state-card-details">
+                        <h3>Kerala</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="upcomingtreks.php?state=Himachal Pradesh">
+                <div class="state-card state-card3">
+                    <img src="img/karnataka.jpg" alt="Singapore">
+                    <div class="state-card-details">
+                        <h3>Himachal pradesh</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+
+                <div class="state-card state-card3">
+                    <img src="img/karnataka.jpg" alt="Singapore">
+                    <div class="state-card-details">
+                        <h3>Himachal pradesh</h3>
+                    </div>
+
+                </div>
+            </a> -->
+        </div>
+    </div>
+
+    <script>
+        var states = ['Karnataka', 'Kerala', 'Tamil Nadu', 'Maharashtra', 'Uttarakhand', 'Himachal Pradesh', 'Jammu and Kashmir', 'Rajasthan'];
+        var images = ['karnataka.jpg', 'kerala.jpg', 'tamilnadu.jpg', 'maharashtra.jpg', 'uttarakhand.jpg', 'himachalpradesh.jpg', 'jammukashmir.jpg', 'rajasthan.jpg'];
+
+        for (let i = 0; i < states.length; i++) {
+            var card = document.createElement('a');
+            card.innerHTML = `
+            <div class="state-card">
+                    <img src="img/${images[i]}" alt="${images[i]}">
+                    <div class="state-card-details">
+                        <h3>${states[i]}</h3>
+                    </div>
+                </div>
+            </div>
+            `;
+            card.href = "upcomingtreks.php?state=" + states[i];
+
+            // var cardDiv = document.createElement("div");
+            // cardDiv.classList.add("state-card");
+            // var img = document.createElement("img");
+            // img.setAttribute("src", "img/" + images[i]);
+            // img.alt = states[i];
+            // cardDiv.appendChild(img);
+            // var detailsDiv = document.createElement("div");
+            // detailsDiv.classList.add("state-card-details");
+            // var h3 = document.createElement('h3');
+            // h3.innerHTML = states[i]
+            // detailsDiv.appendChild(h3);
+            // cardDiv.appendChild(detailsDiv);
+            // card.appendChild(cardDiv);
+            document.querySelector(".state-cards").appendChild(card);
+        }
+    </script>
+</body>
+
+</html>
